@@ -35,15 +35,45 @@ search: true
 
 include: ['_pages']
 
+comments:
+  provider               : "facebook"
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                : "1154065201407691"
+    num_posts            :  "5"
+    colorscheme          :  "light"
+
+
+
+
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/hoanngothanh"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://fb.com/ngothanhhoan"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/ngothanhhoan"
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development  # disable compression in dev environment
+
 defaults:
   # _posts
   - scope:
       path: ""
       type: posts
     values:
+      author_profile: true
+      share: true
       read_time: true
       comments: true
-defaults:
   # _pages
   - scope:
       path: ""
@@ -51,11 +81,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+      comments: true
 
-compress_html:
-  clippings: all
-  ignore:
-    envs: development  # disable compression in dev environment
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
