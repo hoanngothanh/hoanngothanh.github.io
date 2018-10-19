@@ -30,8 +30,11 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-breadcrumbs: true
+#breadcrumbs: true
 search: true
+
+include: ['_pages']
+
 defaults:
   # _posts
   - scope:
