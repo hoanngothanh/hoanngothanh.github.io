@@ -18,7 +18,8 @@ email: nthoan1990@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Full Snack Developer Blog. Talking about technology, my life, etc
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://fullsnackdev.net" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://fullsnackdev.net" # the base hostname & protocol for your site, e.g. http://example.com
+repository: "hoanngothanh/hoanngothanh.github.io"
 twitter_username: hdlaocai
 github_username:  hoanngothanh
 
@@ -26,26 +27,26 @@ github_username:  hoanngothanh
 markdown: kramdown
 #theme: minima
 remote_theme: "mmistakes/minimal-mistakes"
-plugins:
-  - jekyll-feed
-  - jekyll-include-cache
-
-#breadcrumbs: true
-search: true
-
-include: ['_pages']
 
 comments:
   provider               : "facebook"
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
-    appid                : "1154065201407691"
-    num_posts            :  "5"
-    colorscheme          :  "light"
+    appid                : 1154065201407691
+    num_posts            :  5
+    colorscheme          :  light
 
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jemoji
+  - jekyll-sitemap
 
+#breadcrumbs: true
+search: true
 
-
+include: ['_pages']
 
 footer:
   links:
@@ -70,10 +71,12 @@ defaults:
       path: ""
       type: posts
     values:
+      layout: single
       author_profile: true
-      share: true
       read_time: true
       comments: true
+      share: true
+      related: false
   # _pages
   - scope:
       path: ""
