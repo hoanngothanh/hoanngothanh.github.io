@@ -1,9 +1,0 @@
-main:
-#  - title: "Code"
-  #  url: /code/
-#  - title: "Tools"
-  #  url: /tool/
-  #- title: "Miscellaneous"
-  #  url: /categories/
-  - title: "About"
-    url: /about/
