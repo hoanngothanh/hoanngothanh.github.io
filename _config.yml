@@ -2,7 +2,7 @@
 title_left    : "FullSnack"
 title_right   : "Developer" # default: ""
 description   : "Technical writing blog."
-keywords      : "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
+keywords      : "Android, developer, Hanoi, Vietnam, coder, blog, lifestyle, minimalist, technology"
 # the base hostname & protocol for your site, e.g. http://example.com
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 url: "https://fullsnackdev.net"
