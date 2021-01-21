@@ -1,24 +1,39 @@
 ---
 layout: post
-title: "How to Download or Use This Theme"
+title: "Use Android View Binding in old android gradle build tool 3.6 "
 comments: true
-description: "How to Download or Use This Theme"
-keywords: "dummy content"
+description: "Use Android View Binding in old android gradle build tool 3.6"
+keywords: "View Binding"
 ---
 
-### Use this theme as you main site
+### Use Android buildFeatures in old android gradle build tool 3.6
 
-- Download or fork the master branch of this theme repo into your GitHub account.
-- Rename the repo into something like `your_username.github.io`.
-- Edit `_config.yml` file to your preferences.
-- Edit `about.md` file for your About page.
-- Inside `_posts` folder, there are sample of blog entries. Learn from it and start yours.
-- Now, visit `http://your_username.github.io` and you should see your blog running.
+If you want to use **buildFeatures** like View Binding in Android studio project that using outdate gradle build tool like version 3.6 and follow 
+Android Document Website add the following code to build gradle file:
 
-### Use this theme as a project page
+```gradle
+    android {
+    ...
+        buildFeatures {
+            viewBinding true
+        }
+    }
+```
+Android Studio will not compile and throw following error:
 
-If you want to use this theme as a project page blog, you don't need to rename the theme repo into `your_username.github.io`.
 
-All you need to do, open `_config.yml` file, change `baseurl` to your project name which contains this theme, e.g. `baseurl: "/myproject"`.
+>Could not find method buildFeatures() for arguments ... on object of type com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 
-#### Cheers!
+You don't want to risk updating Gradle build tool. Just change to use the following code. 
+```
+// Available in Android Gradle Plugin 3.6.0
+    android {
+        viewBinding {
+            enabled = true
+        }
+    }
+```
+
+Rebuild your project, and the error will go away.
+
+#### Cheers! 
