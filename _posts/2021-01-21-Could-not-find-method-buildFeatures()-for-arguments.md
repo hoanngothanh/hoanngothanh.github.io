@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use Android View Binding in old android gradle build tool 3.6 "
+title: "Use Android buildFeatures in old android gradle build tool 3.6 "
 comments: true
 description: "Use Android View Binding in old android gradle build tool 3.6"
 keywords: "View Binding"
